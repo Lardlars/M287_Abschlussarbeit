@@ -1,0 +1,12 @@
+body {
+  font-family: "Arial", sans-serif; /* Pflicht */
+  background-color: #f5f5f5; /* Extra */
+}
+
+h1 {
+  color: darkblue; /* Extra */
+}
+
+.card {
+  border-radius: 15px; /* Sieht direkt besser aus */
+}
