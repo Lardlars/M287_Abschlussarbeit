@@ -1,10 +1,8 @@
 :root {
-  --color-bg: #EDEEE9;
+  --color-bg: #edeee9;
   --color-text: #000000;
   --color-primary: #1f3a2e;
 }
-
-
 
 body {
   font-family: "Arial", sans-serif; /* Pflicht */
@@ -18,4 +16,3 @@ h1 {
 .card {
   border-radius: 15px; /* Sieht direkt besser aus */
 }
-
