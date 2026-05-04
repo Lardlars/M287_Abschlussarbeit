@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 :root {
   --color-bg: #edeee9;
   --color-text: #000000;
@@ -10,9 +11,13 @@ body {
 }
 
 h1 {
-  color: darkblue; /* Extra */
+  color: var(--color-primary); /* Extra */
 }
 
-.card {
-  border-radius: 15px; /* Sieht direkt besser aus */
+p {
+  color: var(--color-text);
+}
+
+.images {
+  margin: 10px; /* oder einen anderen Wert */
 }
