@@ -1,13 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.google.com/specimen/Poppins?specimen.preview.text=abcdefghijklmnopqatusracv");
 :root {
   --color-bg: #edeee9;
   --color-text: #000000;
   --color-primary: #1f3a2e;
+  --mainfont: "Poppins", sans-serif;
 }
 
 body {
-  font-family: "Arial", sans-serif; /* Pflicht */
-  background-color: #f5f5f5; /* Extra */
+  font-family: var(--mainfont); /* Pflicht */
+  background-color: var(--color-bg); /* Extra */
 }
 
 h1 {
