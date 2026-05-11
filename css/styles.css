@@ -7,13 +7,30 @@
   --mainfont: "Poppins", sans-serif;
 }
 
-.navigation {
+nav {
   display: flex;
-  gap: 20px; /* Abstand zwischen den Links */
-  list-style: none; /* keine Aufzählungszeichen */
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-scheme);
+  padding: 15px 40px;
+}
+
+nav ul {  
+  display: flex;
+  gap: 25px;
+  list-style: none;
   margin: 0;
   padding: 0;
-  background-color: var(--color-scheme);
+}
+
+.navigation {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.navigation:hover {
+  color: var(--color-primary);
 }
 
 body {
