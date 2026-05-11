@@ -3,7 +3,17 @@
   --color-bg: #edeee9;
   --color-text: #000000;
   --color-primary: #1f3a2e;
+  --color-scheme: #355e4a;
   --mainfont: "Poppins", sans-serif;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px; /* Abstand zwischen den Links */
+  list-style: none; /* keine Aufzählungszeichen */
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-scheme);
 }
 
 body {
