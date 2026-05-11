@@ -4,6 +4,7 @@
   --color-text: #000000;
   --color-primary: #1f3a2e;
   --color-scheme: #355e4a;
+  --color-light:#a8b5ad;
   --mainfont: "Poppins", sans-serif;
 }
 
@@ -11,8 +12,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-scheme);
-  padding: 15px 40px;
+  background-color: var(--color-light);
+  padding: 3px 40px;
 }
 
 nav ul {  
@@ -33,14 +34,64 @@ nav ul {
   color: var(--color-primary);
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("../img/hero.jpg") center/cover no-repeat;
+  display: grid;
+  place-items: left;
+  text-align: left;
+  color: white;
+  padding: 120px 40px;
+}
+.hero-card {
+  max-width: 720px;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+.hero-card p {
+  font-size: 18px;
+  margin-top: 1rem;
+  color:white;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  border-color: white;
+}
+.btn:hover {
+  background-color: var(--color-scheme);
+  border-color: var(--color-light);
+}
 body {
   font-family: var(--mainfont); /* Pflicht */
   background-color: var(--color-bg); /* Extra */
 }
 
 h1 {
-  color: var(--color-primary); /* Extra */
+  color: var(--color-light); /* Extra */
+  font-size: 100px;
+  text-shadow: 5px 5px 40px rgba(0, 0, 0, 0.5);
 }
+
 
 p {
   color: var(--color-text);
