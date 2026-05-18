@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Eigenes CSS -->
   <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="../img/dein-logo-png.png">
- <title>Mapily - Reiseziele</title>
+
+  <title>Mapily - Reiseziele</title>
 </head>
 
 <body>
@@ -39,7 +46,7 @@
     </div>
   </nav>
 
-  <!-- Hauptteil der Seite -->
+  <!-- Hauptteil -->
   <main class="container mt-5">
 
     <h1>Reiseziele</h1>
@@ -52,8 +59,9 @@
     <!-- Karten mit Reisezielen -->
     <div class="row mt-4">
 
-      <div class="col-md-4">
-        <div class="card">
+      <!-- Paris Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#parisModal">
           <img src="../img/paris.jpg" class="card-img-top" alt="Paris">
 
           <div class="card-body">
@@ -66,9 +74,10 @@
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../img/berge.jpg" class="card-img-top" alt="Berge">
+      <!-- Nepal Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#nepalModal">
+          <img src="../img/berge.jpg" class="card-img-top" alt="Nepal">
 
           <div class="card-body">
             <h5 class="card-title">Nepal</h5>
@@ -80,82 +89,172 @@
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card">
-          <img src="../img/meer.jpg" class="card-img-top" alt="Meer">
+      <!-- Italien Card -->
+      <div class="col-md-4 mb-4">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#italienModal">
+          <img src="../img/meer.jpg" class="card-img-top" alt="Italien">
 
           <div class="card-body">
             <h5 class="card-title">Italien</h5>
             <p class="card-text">
               Italien ist ein Land in Europa.
-              Dort gibt es viele historische Stätten und eine tolle Küche .
+              Dort gibt es viele historische Stätten und eine tolle Küche.
             </p>
           </div>
         </div>
       </div>
 
     </div>
-<!-- Video Abschnitt -->
-<section class="mt-5">
-  <h2>Unser Reisegeheimtip</h2>
 
-  <p> Kanada das Land der unendlichen Wälder und das perfekte reiseziel.  </p>
+    <!-- Video Abschnitt -->
+    <section class="mt-5">
+      <h2>Unser Reisegeheimtipp</h2>
 
- <video autoplay muted loop preload="none" width="100%">
-  <source src="../video/reisevideo.mp4" type="video/mp4">
-  Dein Browser unterstützt das Video nicht.
-</video>
-</section>
-
-<!-- Formular in Bootstrap Card -->
-<section class="mt-5 mb-5">
-  <div class="card shadow">
-    <div class="card-body">
-
-      <h2 class="card-title">Finde dein perfektes Reiseziel</h2>
-
-      <p class="card-text">
-        Beantworte ein paar Fragen und finde heraus, welche Reise zu dir passt.
+      <p>
+        Kanada, das Land der unendlichen Wälder und ein perfektes Reiseziel.
       </p>
 
-      <form onsubmit="return false;">
-        <div class="mb-3">
-          <label for="reiseart" class="form-label">Welche Reiseart möchtest du?</label>
-          <select class="form-select" id="reiseart">
-            <option>Strand</option>
-            <option>Stadt</option>
-            <option>Natur</option>
-            <option>Abenteuer</option>
-          </select>
+      <video autoplay muted loop preload="none" width="100%">
+        <source src="../video/reisevideo.mp4" type="video/mp4">
+        Dein Browser unterstützt das Video nicht.
+      </video>
+    </section>
+
+    <!-- Formular -->
+    <section class="mt-5 mb-5">
+      <div class="card shadow">
+        <div class="card-body">
+
+          <h2 class="card-title">Finde dein perfektes Reiseziel</h2>
+
+          <p class="card-text">
+            Beantworte ein paar Fragen und finde heraus, welche Reise zu dir passt.
+          </p>
+
+          <form onsubmit="return false;">
+            <div class="mb-3">
+              <label for="reiseart" class="form-label">Welche Reiseart möchtest du?</label>
+              <select class="form-select" id="reiseart">
+                <option>Strand</option>
+                <option>Stadt</option>
+                <option>Natur</option>
+                <option>Abenteuer</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="wetter" class="form-label">Wie soll das Wetter sein?</label>
+              <select class="form-select" id="wetter">
+                <option>Warm</option>
+                <option>Mild</option>
+                <option>Kühl</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="budget" class="form-label">Wie gross ist dein Budget?</label>
+              <select class="form-select" id="budget">
+                <option>Klein</option>
+                <option>Mittel</option>
+                <option>Hoch</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Reiseziel finden
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Paris Modal -->
+  <div class="modal fade" id="parisModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Paris</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
 
-        <div class="mb-3">
-          <label for="wetter" class="form-label">Wie soll das Wetter sein?</label>
-          <select class="form-select" id="wetter">
-            <option>Warm</option>
-            <option>Mild</option>
-            <option>Kühl</option>
-          </select>
+        <div class="modal-body">
+          <img src="../img/paris.jpg" class="img-fluid rounded mb-3" alt="Paris">
+
+          <p>
+            Paris ist die Hauptstadt von Frankreich. Die Stadt ist bekannt für
+            den Eiffelturm, den Louvre, schöne Cafés und viele Sehenswürdigkeiten.
+          </p>
+
+          <p>
+            Paris passt gut für Personen, die Kultur, Architektur und Stadtleben mögen.
+          </p>
         </div>
 
-        <div class="mb-3">
-          <label for="budget" class="form-label">Wie gross ist dein Budget?</label>
-          <select class="form-select" id="budget">
-            <option>Klein</option>
-            <option>Mittel</option>
-            <option>Hoch</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary">
-          Reiseziel finden
-        </button>
-      </form>
-
+      </div>
     </div>
   </div>
-</section>
-  </main>
+
+  <!-- Nepal Modal -->
+  <div class="modal fade" id="nepalModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Nepal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <img src="../img/berge.jpg" class="img-fluid rounded mb-3" alt="Nepal">
+
+          <p>
+            Nepal liegt in Asien und ist besonders bekannt für die Himalaya-Berge.
+            Dort befindet sich auch der Mount Everest.
+          </p>
+
+          <p>
+            Nepal passt gut für Personen, die Natur, Wandern und Abenteuer mögen.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Italien Modal -->
+  <div class="modal fade" id="italienModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Italien</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <img src="../img/meer.jpg" class="img-fluid rounded mb-3" alt="Italien">
+
+          <p>
+            Italien ist ein beliebtes Reiseziel in Europa. Es ist bekannt für
+            Städte wie Rom, Venedig und Florenz.
+          </p>
+
+          <p>
+            Italien passt gut für Personen, die gutes Essen, Geschichte,
+            Kultur und schöne Landschaften mögen.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript für Modal -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

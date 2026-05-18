@@ -643,3 +643,226 @@ p {
  
 }
  
+/* Design für Reiseziele Seite */
+
+/* Hauptbereich */
+main.container {
+  padding-bottom: 60px;
+}
+
+/* Titel auf Reiseziele */
+main.container h1 {
+  color: var(--color-primary);
+  font-size: 60px;
+  text-shadow: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main.container > p {
+  text-align: center;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+/* Karten */
+main.container .card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+main.container .card:hover {
+  transform: translateY(-8px);
+}
+
+main.container .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+main.container .card-body {
+  padding: 22px;
+}
+
+main.container .card-title {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Video Abschnitt */
+main.container section.mt-5 {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 60px !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+}
+
+main.container section.mt-5 h2 {
+  color: var(--color-primary);
+}
+
+main.container video {
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+/* Formular */
+main.container form label {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+main.container .form-select {
+  border-radius: 10px;
+  border: 1px solid var(--color-light);
+  padding: 10px;
+}
+
+/* Button */
+main.container .btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 10px;
+}
+
+main.container .btn-primary:hover {
+  background-color: var(--color-scheme);
+}
+
+/* Handy */
+@media (max-width: 768px) {
+  main.container h1 {
+    font-size: 42px;
+  }
+
+  main.container section.mt-5 {
+    padding: 20px;
+  }
+}
+.card {
+  cursor: pointer;
+}
+
+
+/* Social Media Icons */
+ 
+.social-icons {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+}
+ 
+.social-icons a {
+
+  display: inline-block;
+
+  width: 35px;
+
+  height: 35px;
+ 
+  border-radius: 50%;
+ 
+  background: rgba(255,255,255,0.15);
+ 
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+ 
+  color: white;
+ 
+  transition: 0.3s;
+
+}
+ 
+.social-icons a:hover {
+
+  background: var(--color-light);
+
+  transform: translateY(-3px);
+
+}
+ 
+/* Dark Mode Button */
+ 
+.dark-btn {
+
+  background: white;
+
+  color: var(--color-primary);
+ 
+  border: none;
+ 
+  padding: 10px 20px;
+ 
+  border-radius: 20px;
+ 
+  cursor: pointer;
+ 
+  transition: 0.3s;
+
+}
+ 
+.dark-btn:hover {
+
+  transform: scale(1.05);
+
+}
+ 
+/* Dark Mode aktiv */
+ 
+body.dark {
+
+  background-color: #121212;
+
+  color: white;
+
+}
+ 
+body.dark .info-box,
+
+body.dark .custom-card {
+
+  background-color: #1e1e1e;
+
+  color: white;
+
+}
+ 
+body.dark .footer {
+
+  background-color: #0d1f17;
+
+}
+ 
+/* Scroll Animation */
+ 
+.scroll-fade {
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition: 0.8s ease;
+
+}
+ 
+.scroll-fade.show {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+ 
