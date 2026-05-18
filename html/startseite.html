@@ -21,66 +21,167 @@
 
   <body>
     <header>
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <a
-            class="navbar-brand d-flex align-items-center"
-            href="startseite.html"
-          >
-            <img
-              src="../img/dein-logo-png.png"
-              alt="Logo"
-              width="40"
-              height="40"
-              class="me-2"
-            />
-            Mapily
-          </a>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <!-- Navigation -->
 
-          <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="startseite.html">Home</a>
-              </li>
+  <nav class="navbar navbar-expand-lg custom-navbar">
 
-              <li class="nav-item">
-                <a class="nav-link" href="reiseziele.html">Reiseziele</a>
-              </li>
+    <div class="container">
 
-              <li class="nav-item">
-                <a class="nav-link" href="planung.html">Planung</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Hero mit Bild + Text -->
-      <section
-        class="hero text-center text-white d-flex align-items-center justify-content-center"
+      <a
+        class="navbar-brand d-flex align-items-center brand"
+        href="startseite.html"
       >
-        <div class="hero-overlay"></div>
 
-        <div class="hero-content">
-          <h1 class="display-2">Mapily</h1>
-          <p class="lead">Dein Reisebegleiter</p>
+        <img
+          src="../img/dein-logo-png.png"
+          alt="Logo"
+          width="45"
+          height="45"
+          class="me-2"
+        >
 
-          <a class="btn btn-primary btn-lg" href="reiseziele.html">
-            Jetzt entdecken
-          </a>
+        Mapily
+
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+      >
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="startseite.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="reiseziele.html">
+              Reiseziele
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="planung.html">
+              Planung
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="hero-card">
+
+      <h1 class="display-2">Mapily</h1>
+
+      <p class="lead hero-text">
+        Entdecke neue Orte, plane Abenteuer
+        und finde deine nächste Traumreise.
+      </p>
+
+      <!-- Reisezitat -->
+
+      <p class="hero-quote">
+        "Die Welt ist zu schön,
+        um zuhause zu bleiben."
+      </p>
+
+      <!-- Suchleiste -->
+
+      <form class="search-box">
+
+        <input
+          type="text"
+          placeholder="Suche dein Reiseziel..."
+        >
+
+        <button type="submit">
+          Suchen
+        </button>
+
+      </form>
+
+      <!-- Buttons -->
+
+      <div class="hero-buttons">
+
+        <a class="btn btn-primary btn-lg" href="reiseziele.html">
+          Jetzt entdecken
+        </a>
+
+        <button
+          class="btn btn-outline-light btn-lg"
+          data-bs-toggle="modal"
+          data-bs-target="#travelModal"
+        >
+          Mehr Infos
+        </button>
+
+      </div>
+
+      <!-- Statistik -->
+
+      <div class="hero-stats">
+
+        <div>
+          <h3>120+</h3>
+          <p>Reiseziele</p>
         </div>
-      </section>
-    </header>
+
+        <div>
+          <h3>35</h3>
+          <p>Länder</p>
+        </div>
+
+        <div>
+          <h3>10k</h3>
+          <p>Nutzer</p>
+        </div>
+
+      </div>
+
+      <!-- Beliebte Ziele -->
+
+      <div class="popular-tags">
+
+        <span>Paris</span>
+        <span>Bali</span>
+        <span>Tokyo</span>
+        <span>New York</span>
+
+      </div>
+
+      <!-- Scroll Animation -->
+
+      <div class="scroll-indicator">
+        ↓ Scrollen
+      </div>
+
+    </div>
+
+  </section>
+
+</header>
 
     <main>
       <!-- Startinformationen -->
@@ -309,27 +410,77 @@
         </div>
       </section>
 
-      <!-- Video -->
-      <section class="container py-5">
-        <h2>Reisevideo</h2>
+    <footer class="footer text-white mt-5">
 
-        <video controls preload="none" width="100%">
-          <source src="../media/travel.mp4" type="video/mp4" />
-        </video>
-      </section>
+  <div class="container py-4">
 
-      <!-- Audio -->
-      <section class="container py-5">
-        <h2>Musik</h2>
+    <div class="row">
 
-        <audio controls preload="none">
-          <source src="../media/music.mp3" type="audio/mpeg" />
-        </audio>
-      </section>
-    </main>
+      <!-- Logo / Name -->
 
-    <footer class="bg-dark text-white text-center p-3">© 2026 Mapily</footer>
+      <div class="col-md-4 mb-4">
 
+        <h3>Mapily</h3>
+
+        <p>
+          Dein moderner Reisebegleiter für Abenteuer
+          auf der ganzen Welt.
+        </p>
+
+      </div>
+
+      <!-- Projektinformationen -->
+
+      <div class="col-md-4 mb-4">
+
+        <h4>Projektinformationen</h4>
+
+        <p><strong>Ersteller:</strong><br>
+        Luis Backer, Lars Blättler</p>
+
+        <p><strong>Dokumentation:</strong><br>
+        Backer_Blättler_mma25b_M287</p>
+
+        <p><strong>Abgabe:</strong><br>
+        1. Juni 2026</p>
+
+      </div>
+
+      <!-- Navigation -->
+
+      <div class="col-md-4 mb-4">
+
+        <h4>Navigation</h4>
+
+        <ul class="footer-links">
+
+          <li>
+            <a href="startseite.html">Home</a>
+          </li>
+
+          <li>
+            <a href="reiseziele.html">Reiseziele</a>
+          </li>
+
+          <li>
+            <a href="planung.html">Planung</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="text-center mb-0">
+      © 2026 Mapily | Alle Rechte vorbehalten
+    </p>
+
+  </div>
+
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
