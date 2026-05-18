@@ -1,40 +1,161 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="reiseziele.html" />
-    <link rel="stylesheet" href="planung.html" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-     <header>
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="startseite.html">
-      <img src="../img/dein-logo-png.png" alt="Logo" width="40" height="40" class="me-2">
-      Mapily
-    </a>
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="startseite.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="reiseziele.html">Reiseziele</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="planung.html">Planung</a>
-        </li>
-      </ul>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../img/dein-logo-png.png">
+ <title>Mapily - Reiseziele</title>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+      <a class="navbar-brand" href="startseite.html">
+        <img src="../img/dein-logo-png.png" alt="Logo" width="40">
+        Mapily
+      </a>
+
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="startseite.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="reiseziele.html">Reiseziele</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="planung.html">Planung</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hauptteil der Seite -->
+  <main class="container mt-5">
+
+    <h1>Reiseziele</h1>
+
+    <p>
+      Auf dieser Seite zeigen wir verschiedene Reiseziele.
+      Man kann hier Ideen für eine Reise finden.
+    </p>
+
+    <!-- Karten mit Reisezielen -->
+    <div class="row mt-4">
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="../img/paris.jpg" class="card-img-top" alt="Paris">
+
+          <div class="card-body">
+            <h5 class="card-title">Paris</h5>
+            <p class="card-text">
+              Paris ist eine bekannte Stadt in Frankreich.
+              Dort gibt es den Eiffelturm und viele Museen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="../img/berge.jpg" class="card-img-top" alt="Berge">
+
+          <div class="card-body">
+            <h5 class="card-title">Nepal</h5>
+            <p class="card-text">
+              Nepal ist ein Land in Asien.
+              Dort gibt es die Himalaya-Berge und viele Tempel.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="../img/meer.jpg" class="card-img-top" alt="Meer">
+
+          <div class="card-body">
+            <h5 class="card-title">Italien</h5>
+            <p class="card-text">
+              Italien ist ein Land in Europa.
+              Dort gibt es viele historische Stätten und eine tolle Küche .
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<!-- Video Abschnitt -->
+<section class="mt-5">
+  <h2>Unser Reisegeheimtip</h2>
+
+  <p> Kanada das Land der unendlichen Wälder und das perfekte reiseziel.  </p>
+
+ <video autoplay muted loop preload="none" width="100%">
+  <source src="../video/reisevideo.mp4" type="video/mp4">
+  Dein Browser unterstützt das Video nicht.
+</video>
+</section>
+
+<!-- Formular in Bootstrap Card -->
+<section class="mt-5 mb-5">
+  <div class="card shadow">
+    <div class="card-body">
+
+      <h2 class="card-title">Finde dein perfektes Reiseziel</h2>
+
+      <p class="card-text">
+        Beantworte ein paar Fragen und finde heraus, welche Reise zu dir passt.
+      </p>
+
+      <form onsubmit="return false;">
+        <div class="mb-3">
+          <label for="reiseart" class="form-label">Welche Reiseart möchtest du?</label>
+          <select class="form-select" id="reiseart">
+            <option>Strand</option>
+            <option>Stadt</option>
+            <option>Natur</option>
+            <option>Abenteuer</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="wetter" class="form-label">Wie soll das Wetter sein?</label>
+          <select class="form-select" id="wetter">
+            <option>Warm</option>
+            <option>Mild</option>
+            <option>Kühl</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="budget" class="form-label">Wie gross ist dein Budget?</label>
+          <select class="form-select" id="budget">
+            <option>Klein</option>
+            <option>Mittel</option>
+            <option>Hoch</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Reiseziel finden
+        </button>
+      </form>
+
     </div>
   </div>
-</nav>
-    </header>
-  </body>
+</section>
+  </main>
+
+</body>
 </html>
