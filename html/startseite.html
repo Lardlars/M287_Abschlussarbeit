@@ -9,20 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-<script>
-  // Scroll Animation
-  const elements = document.querySelectorAll(".scroll-fade");
-
-  window.addEventListener("scroll", () => {
-    elements.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-
-      if (top < window.innerHeight - 100) {
-        el.classList.add("show");
-      }
-    });
-  });
-</script> 
+ 
     <!-- Eigenes CSS -->
     <link rel="stylesheet" href="../css/styles.css" />
 
@@ -30,6 +17,7 @@
     <link rel="icon" href="../favicon.ico" />
 
     <title>Mapily - Startseite</title>
+    
   </head>
 
   <body>
@@ -304,50 +292,6 @@
         </div>
       </section>
 
-      <!-- 4 Spalten -->
-      <section class="container py-5">
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-6">
-            <div class="p-4 bg-light rounded">Paris</div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="p-4 bg-light rounded">Tokyo</div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="p-4 bg-light rounded">Rom</div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="p-4 bg-light rounded">Sydney</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Accordion -->
-      <section class="container py-5">
-        <h2>Häufige Fragen</h2>
-
-        <div class="accordion" id="faqAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button"
-                data-bs-toggle="collapse"
-                data-bs-target="#frage1"
-              >
-                Wie buche ich?
-              </button>
-            </h2>
-
-            <div id="frage1" class="accordion-collapse collapse show">
-              <div class="accordion-body">Direkt über unsere Webseite.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
      
 
     <footer class="footer text-white mt-5">
@@ -437,10 +381,6 @@
     <hr class="footer-divider">
 
     <div class="text-center">
-
-      <button id="darkToggle" class="dark-btn">
-        🌙 Dark Mode
-      </button>
 
       <p class="footer-bottom mt-3">
         © 2026 Mapily | Alle Rechte vorbehalten
