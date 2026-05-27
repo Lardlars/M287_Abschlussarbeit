@@ -1,40 +1,428 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html lang="de">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="reiseziele.html" />
-    <link rel="stylesheet" href="planung.html" />
+
+    <!-- Eigenes CSS -->
     <link rel="stylesheet" href="../css/styles.css" />
-    <title>Document</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/dein-logo-png.png" />
+
+    <title>Mapily - Planung</title>
   </head>
+
   <body>
-     <header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="startseite.html">
-      <img src="../img/dein-logo-png.png" alt="Logo" width="40" height="40" class="me-2">
-      Mapily
-    </a>
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="startseite.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="reiseziele.html">Reiseziele</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="planung.html">Planung</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    </header>
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center brand"
+          href="startseite.html"
+        >
+          <img
+            src="../img/dein-logo-png.png"
+            alt="Logo"
+            width="45"
+            height="45"
+            class="me-2"
+          />
+
+          Mapily
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="startseite.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="reiseziele.html">Reiseziele</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="planung.html">Planung</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-5">
+      <!-- Titel -->
+
+      <section class="text-center mb-5">
+        <h1 class="planung-title">Plane deine Traumreise</h1>
+
+        <p class="planung-text">
+          Organisiere deine nächste Reise einfach und schnell mit Mapily.
+        </p>
+      </section>
+
+      <!-- Formular -->
+
+      <section class="planung-box mb-5">
+        <h2 class="mb-4">Reiseplan Formular</h2>
+
+        <form>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Reiseziel</label>
+
+              <input type="text" class="form-control" placeholder="z.B. Bali" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Personenanzahl</label>
+
+              <input type="number" class="form-control" placeholder="2" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Abreisedatum</label>
+
+              <input type="date" class="form-control" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Rückreisedatum</label>
+
+              <input type="date" class="form-control" />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Budget</label>
+
+            <select class="form-select">
+              <option>Klein</option>
+              <option>Mittel</option>
+              <option>Hoch</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Unterkunft</label>
+
+            <select class="form-select">
+              <option>Hotel</option>
+              <option>Ferienwohnung</option>
+              <option>Hostel</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label">Besondere Wünsche</label>
+
+            <textarea
+              class="form-control"
+              rows="4"
+              placeholder="z.B. Strandnähe, Pool, Frühstück..."
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-lg">Reise planen</button>
+        </form>
+      </section>
+
+      <!-- Progress Bar -->
+
+      <section class="planung-box mb-5">
+        <h2 class="mb-4">Dein Planungsfortschritt</h2>
+
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            style="width: 75%"
+          >
+            75%
+          </div>
+        </div>
+      </section>
+
+      <!-- Accordion -->
+
+      <section class="planung-box mb-5">
+        <h2 class="mb-4">Häufige Fragen</h2>
+
+        <div class="accordion" id="planungAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#frage1"
+              >
+                Wie funktioniert die Reiseplanung?
+              </button>
+            </h2>
+
+            <div id="frage1" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                Wähle dein Reiseziel und passe deine Reise individuell an.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#frage2"
+              >
+                Kann ich Hotels vergleichen?
+              </button>
+            </h2>
+
+            <div id="frage2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Ja, du kannst verschiedene Unterkünfte vergleichen.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Accordion -->
+
+        <div class="accordion" id="planungAccordion">
+          <!-- Frage 3 -->
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#frage3"
+              >
+                Funktioniert Mapily auf Smartphones?
+              </button>
+            </h2>
+
+            <div id="frage3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Ja, die Webseite ist responsive und funktioniert auf
+                Smartphones, Tablets und Desktop-Geräten.
+              </div>
+            </div>
+          </div>
+
+          <!-- Frage 4 -->
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#frage4"
+              >
+                Welche Reisearten gibt es?
+              </button>
+            </h2>
+
+            <div id="frage4" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Du kannst Strandferien, Städtereisen, Abenteuerreisen oder
+                Naturreisen entdecken.
+              </div>
+            </div>
+          </div>
+
+          <!-- Frage 5 -->
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#frage5"
+              >
+                Ist die Nutzung kostenlos?
+              </button>
+            </h2>
+
+            <div id="frage5" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Ja, Mapily kann kostenlos genutzt werden.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carousel -->
+
+      <section class="planung-box">
+        <h2 class="mb-4 text-center">Beliebte Reiseziele</h2>
+
+        <div
+          id="travelCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="1900"
+        >
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="../img/paris.jpg" class="d-block w-100" alt="Paris" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../img/Asien.jpg" class="d-block w-100" alt="Asien" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../img/meer.jpg" class="d-block w-100" alt="Strand" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../img/berge.jpg" class="d-block w-100" alt="Alpen" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="../img/Europa.jpg" class="d-block w-100" alt="Europa" />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="../img/Suedamerika.jpg"
+                class="d-block w-100"
+                alt="Südamerika"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../img/Nordamerika.jpg"
+                class="d-block w-100"
+                alt="Nordamerika"
+              />
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#travelCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#travelCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer text-white mt-5">
+      <div class="container py-4">
+        <div class="row">
+          <!-- Mapily -->
+
+          <div class="col-md-3 mb-4">
+            <h3 class="footer-title">Mapily</h3>
+
+            <p>
+              Dein moderner Reisebegleiter für Abenteuer auf der ganzen Welt.
+            </p>
+
+            <!-- Social Media -->
+
+            <div class="social-icons">
+              <a href="#"><span>📸</span></a>
+              <a href="#"><span>🎥</span></a>
+              <a href="#"><span>🐦</span></a>
+            </div>
+          </div>
+
+          <!-- Projekt -->
+
+          <div class="col-md-3 mb-4">
+            <h4 class="footer-title">Projektinformationen</h4>
+
+            <p>
+              <strong>Ersteller:</strong><br />
+              Luis Backer, Lars Blättler
+            </p>
+
+            <p>
+              <strong>Dokumentation:</strong><br />
+              Backer_Blättler_mma25b_M287
+            </p>
+
+            <p>
+              <strong>Abgabe:</strong><br />
+              1. Juni 2026
+            </p>
+          </div>
+
+          <!-- Navigation -->
+
+          <div class="col-md-3 mb-4">
+            <h4 class="footer-title">Navigation</h4>
+
+            <ul class="footer-links">
+              <li><a href="startseite.html">Home</a></li>
+              <li><a href="reiseziele.html">Reiseziele</a></li>
+              <li><a href="planung.html">Planung</a></li>
+            </ul>
+          </div>
+
+          <!-- Google Maps -->
+
+          <div class="col-md-3 mb-4">
+            <h4 class="footer-title">Standort</h4>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10822.329847735455!2d8.3017!3d47.0502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ffb85c4a6f5d1%3A0x41fef1f1f1f1f1f1!2sLucerne%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1716030000000"
+              width="100%"
+              height="150"
+              style="border: 0; border-radius: 15px"
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="text-center">
+          <p class="footer-bottom mt-3">
+            © 2026 Mapily | Alle Rechte vorbehalten
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
