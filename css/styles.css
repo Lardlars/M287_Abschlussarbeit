@@ -19,23 +19,23 @@ body {
 }
 
 h1 {
+  margin: 0;
   color: var(--color-light);
   font-size: 100px;
-  margin: 0;
   text-shadow: 5px 5px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Navbar */
+/* Navigation */
 
 .custom-navbar {
-  background: var(--color-primary) !important;
   padding: 15px 40px;
+  background: var(--color-primary) !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand,
 .nav-link {
-  color: white !important;
+  color: #fff !important;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -52,21 +52,21 @@ h1 {
 /* Hero */
 
 .hero {
-  min-height: 90vh;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("../img/hero.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 90vh;
   padding: 100px 20px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../img/hero.jpg") center / cover no-repeat;
 }
 
 .hero-card {
   max-width: 850px;
   padding: 3rem;
-  border-radius: 30px;
   text-align: center;
+  border-radius: 30px;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -76,12 +76,12 @@ h1 {
 
 .hero-card p,
 .continent-overlay p {
-  color: white;
+  color: #fff;
 }
 
 .hero-text {
-  font-size: 20px;
   margin-top: 20px;
+  font-size: 20px;
 }
 
 .hero-quote {
@@ -91,38 +91,27 @@ h1 {
   color: rgba(255, 255, 255, 0.85) !important;
 }
 
-/* Buttons */
-
-.btn-primary {
-  background: var(--color-primary);
-  border: none;
-  border-radius: 10px;
-}
-
-.btn-primary:hover {
-  background: var(--color-scheme);
+.hero-buttons,
+.hero-stats,
+.popular-tags,
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hero-buttons {
-  display: flex;
-  justify-content: center;
   gap: 20px;
   margin-top: 30px;
-  flex-wrap: wrap;
 }
 
-/* Hero Stats */
-
 .hero-stats {
-  display: flex;
-  justify-content: center;
   gap: 50px;
   margin-top: 45px;
-  flex-wrap: wrap;
 }
 
 .hero-stats h3 {
-  color: white;
+  color: #fff;
   font-size: 38px;
 }
 
@@ -133,17 +122,14 @@ h1 {
 /* Tags */
 
 .popular-tags {
-  display: flex;
-  justify-content: center;
   gap: 15px;
   margin-top: 35px;
-  flex-wrap: wrap;
 }
 
 .popular-tags span {
   padding: 10px 18px;
+  color: #fff;
   border-radius: 30px;
-  color: white;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   transition: 0.3s;
@@ -151,7 +137,6 @@ h1 {
 
 .popular-tags span:hover {
   background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-3px);
 }
 
 /* Kontinente */
@@ -160,8 +145,8 @@ h1 {
   position: relative;
   overflow: hidden;
   height: 350px;
-  border-radius: 20px;
   cursor: pointer;
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -172,40 +157,40 @@ h1 {
   transition: transform 0.5s ease;
 }
 
+.continent-card:hover img {
+  transform: scale(1.1);
+}
+
 .continent-overlay {
   position: absolute;
   inset: 0;
-  padding: 30px;
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
   opacity: 0;
+  background: rgba(0, 0, 0, 0.75);
   transition: opacity 0.4s ease;
-}
-
-.continent-overlay h3 {
-  font-size: 32px;
-  margin-bottom: 15px;
 }
 
 .continent-card:hover .continent-overlay {
   opacity: 1;
 }
 
-.continent-card:hover img {
-  transform: scale(1.1);
+.continent-overlay h3 {
+  margin-bottom: 15px;
+  font-size: 32px;
 }
 
 /* Karten */
 
 .card {
+  overflow: hidden;
   border: none;
   border-radius: 20px;
-  overflow: hidden;
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
@@ -229,15 +214,24 @@ h1 {
   font-weight: 700;
 }
 
-.info-box {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  height: 100%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+.info-box,
+.planung-box {
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Planung + Reiseziele */
+.info-box {
+  height: 100%;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.planung-box {
+  padding: 40px;
+  border-radius: 25px;
+}
+
+/* Planung */
 
 .planung-title {
   color: var(--color-primary);
@@ -251,35 +245,16 @@ h1 {
   font-size: 20px;
 }
 
-.planung-box {
-  background: white;
-  padding: 40px;
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
 .planung-box .form-control,
 .planung-box .form-select {
   padding: 12px;
-  border-radius: 12px;
   border: 1px solid var(--color-light);
+  border-radius: 12px;
 }
 
 .planung-box label {
-  font-weight: 600;
   color: var(--color-primary);
-}
-
-/* Progress */
-
-.progress {
-  height: 30px;
-  border-radius: 20px;
-}
-
-.progress-bar {
-  background: var(--color-primary);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Accordion */
@@ -290,8 +265,8 @@ h1 {
 }
 
 .accordion-button:not(.collapsed) {
-  background: var(--color-light);
   color: var(--color-primary);
+  background: var(--color-light);
 }
 
 /* Carousel */
@@ -310,8 +285,8 @@ h1 {
 
 .footer h3,
 .footer h4 {
-  color: white;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .footer p {
@@ -319,8 +294,8 @@ h1 {
 }
 
 .footer-links {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 .footer-links li {
@@ -328,7 +303,7 @@ h1 {
 }
 
 .footer-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -338,25 +313,28 @@ h1 {
 }
 
 .social-icons {
-  display: flex;
   gap: 10px;
   margin-top: 15px;
 }
 
 .social-icons a {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  color: white;
-  background: rgba(255, 255, 255, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
   transition: 0.3s;
 }
 
 .social-icons a:hover {
   background: var(--color-light);
+}
+
+.popular-tags span:hover,
+.social-icons a:hover {
   transform: translateY(-3px);
 }
 
