@@ -214,16 +214,16 @@ h1 {
   font-weight: 700;
 }
 
-.info-box,
-.planung-box {
-  background: #fff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
 .info-box {
   height: 100%;
   padding: 30px;
   border-radius: 20px;
+}
+
+.info-box,
+.planung-box {
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .planung-box {
