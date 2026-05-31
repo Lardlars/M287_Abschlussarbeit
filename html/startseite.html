@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
- 
+
     <!-- Eigenes CSS -->
     <link rel="stylesheet" href="../css/styles.css" />
 
@@ -17,152 +17,121 @@
     <link rel="icon" href="../favicon.ico" />
 
     <title>Mapily - Startseite</title>
-    
   </head>
 
   <body>
     <header>
+      <!-- Navigation -->
 
-  <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center brand"
+            href="startseite.html"
+          >
+            <img
+              src="../img/dein-logo-png.png"
+              alt="Logo"
+              width="45"
+              height="45"
+              class="me-2"
+            />
 
-  <nav class="navbar navbar-expand-lg custom-navbar">
+            Mapily
+          </a>
 
-    <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <a
-        class="navbar-brand d-flex align-items-center brand"
-        href="startseite.html"
-      >
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="startseite.html"> Home </a>
+              </li>
 
-        <img
-          src="../img/dein-logo-png.png"
-          alt="Logo"
-          width="45"
-          height="45"
-          class="me-2"
-        >
+              <li class="nav-item">
+                <a class="nav-link" href="reiseziele.html"> Reiseziele </a>
+              </li>
 
-        Mapily
-
-      </a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-      >
-
-        <span class="navbar-toggler-icon"></span>
-
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNavbar">
-
-        <ul class="navbar-nav ms-auto">
-
-          <li class="nav-item">
-            <a class="nav-link active" href="startseite.html">
-              Home
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="reiseziele.html">
-              Reiseziele
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="planung.html">
-              Planung
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-  <!-- Hero -->
-
-  <section class="hero">
-
-    <div class="hero-card">
-
-      <h1 class="display-2">Mapily</h1>
-
-      <p class="lead hero-text">
-        Entdecke neue Orte, plane Abenteuer
-        und finde deine nächste Traumreise.
-      </p>
-
-      <!-- Reisezitat -->
-
-      <p class="hero-quote">
-        "Die Welt ist zu schön,
-        um zuhause zu bleiben."
-      </p>
-
-      
-
-      <!-- Buttons -->
-
-      <div class="hero-buttons">
-
-        <a class="btn btn-primary btn-lg" href="reiseziele.html">
-          Jetzt entdecken
-        </a>
-
-        <button
-          class="btn btn-outline-light btn-lg"
-          data-bs-toggle="modal"
-          data-bs-target="#travelModal"
-        >
-          Mehr Infos
-        </button>
-
-      </div>
-
-      <!-- Statistik -->
-
-      <div class="hero-stats">
-
-        <div>
-          <h3>120+</h3>
-          <p>Reiseziele</p>
+              <li class="nav-item">
+                <a class="nav-link" href="planung.html"> Planung </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
 
-        <div>
-          <h3>35</h3>
-          <p>Länder</p>
+      <!-- Hero -->
+
+      <section class="hero">
+        <div class="hero-card">
+          <h1 class="display-2">Mapily</h1>
+
+          <p class="lead hero-text">
+            Entdecke neue Orte, plane Abenteuer und finde deine nächste
+            Traumreise.
+          </p>
+
+          <!-- Reisezitat -->
+
+          <p class="hero-quote">
+            "Die Welt ist zu schön, um zuhause zu bleiben."
+          </p>
+
+          <!-- Buttons -->
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary btn-lg" href="reiseziele.html">
+              Jetzt entdecken
+            </a>
+
+            <button
+              class="btn btn-outline-light btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#travelModal"
+            >
+              Mehr Infos
+            </button>
+          </div>
+
+          <!-- Statistik -->
+
+          <div class="hero-stats">
+            <div>
+              <h3>120+</h3>
+              <p>Reiseziele</p>
+            </div>
+
+            <div>
+              <h3>35</h3>
+              <p>Länder</p>
+            </div>
+
+            <div>
+              <h3>10k</h3>
+              <p>Nutzer</p>
+            </div>
+          </div>
+
+          <!-- Beliebte Ziele -->
+
+          <div class="popular-tags">
+            <span>Paris</span>
+            <span>Bali</span>
+            <span>Tokyo</span>
+            <span>New York</span>
+          </div>
         </div>
-
-        <div>
-          <h3>10k</h3>
-          <p>Nutzer</p>
-        </div>
-
-      </div>
-
-      <!-- Beliebte Ziele -->
-
-      <div class="popular-tags">
-
-        <span>Paris</span>
-        <span>Bali</span>
-        <span>Tokyo</span>
-        <span>New York</span>
-
-      </div>
-
-</header>
+      </section>
+    </header>
 
     <main>
-
       <!-- Kontinente -->
 
       <section class="container py-5">
@@ -262,7 +231,8 @@
         </div>
       </section>
 
-      <!-- 3 Spalten unterschiedliche Breiten -->
+      <!-- Kartenbereich -->
+
       <section class="container py-5">
         <div class="row">
           <article class="col-lg-6 col-md-12">
@@ -271,6 +241,7 @@
 
               <div class="card-body">
                 <h5 class="card-title">Traumstrände</h5>
+
                 <p class="card-text">Perfekte Reiseziele für den Sommer.</p>
               </div>
             </div>
@@ -279,6 +250,7 @@
           <article class="col-lg-3 col-md-6 mt-4 mt-lg-0">
             <div class="info-box">
               <h4>Hotels</h4>
+
               <p>Finde passende Unterkünfte.</p>
             </div>
           </article>
@@ -286,111 +258,98 @@
           <article class="col-lg-3 col-md-6 mt-4 mt-lg-0">
             <div class="info-box">
               <h4>Flüge</h4>
+
               <p>Buche günstige Verbindungen.</p>
             </div>
           </article>
         </div>
       </section>
+    </main>
 
-     
+    <!-- Footer -->
 
     <footer class="footer text-white mt-5">
+      <div class="container py-4">
+        <div class="row">
+          <!-- Mapily -->
 
-  <div class="container py-4">
+          <div class="col-md-3 mb-4">
+            <h3 class="footer-title">Mapily</h3>
 
-    <div class="row">
+            <p>
+              Dein moderner Reisebegleiter für Abenteuer auf der ganzen Welt.
+            </p>
 
-      <!-- Mapily -->
+            <!-- Social Media -->
 
-      <div class="col-md-3 mb-4">
+            <div class="social-icons">
+              <a href="#"><span>📸</span></a>
+              <a href="#"><span>🎥</span></a>
+              <a href="#"><span>🐦</span></a>
+            </div>
+          </div>
 
-        <h3 class="footer-title">Mapily</h3>
+          <!-- Projekt -->
 
-        <p>
-          Dein moderner Reisebegleiter für Abenteuer
-          auf der ganzen Welt.
-        </p>
+          <div class="col-md-3 mb-4">
+            <h4 class="footer-title">Projektinformationen</h4>
 
-        <!-- Social Media -->
+            <p>
+              <strong>Ersteller:</strong><br />
+              Luis Backer, Lars Blättler
+            </p>
 
-        <div class="social-icons">
+            <p>
+              <strong>Dokumentation:</strong><br />
+              Backer_Blättler_mma25b_M287
+            </p>
 
-          <a href="#"><span>📸</span></a>
-          <a href="#"><span>🎥</span></a>
-          <a href="#"><span>🐦</span></a>
+            <p>
+              <strong>Abgabe:</strong><br />
+              1. Juni 2026
+            </p>
+          </div>
 
+          <!-- Navigation -->
+
+          <div class="col-md-3 mb-4">
+            <h4 class="footer-title">Navigation</h4>
+
+            <ul class="footer-links">
+              <li><a href="startseite.html">Home</a></li>
+              <li><a href="reiseziele.html">Reiseziele</a></li>
+              <li><a href="planung.html">Planung</a></li>
+            </ul>
+          </div>
+
+          <!-- Google Maps -->
+
+          <div class="col-md-3 mb-4">
+            <h4 class="footer-title">Standort</h4>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10822.329847735455!2d8.3017!3d47.0502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ffb85c4a6f5d1%3A0x41fef1f1f1f1f1f1!2sLucerne%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1716030000000"
+              width="100%"
+              height="150"
+              style="border: 0; border-radius: 15px"
+              loading="lazy"
+            >
+            </iframe>
+          </div>
         </div>
 
+        <hr class="footer-divider" />
+
+        <div class="text-center">
+          <p class="footer-bottom mt-3">
+            © 2026 Mapily | Alle Rechte vorbehalten
+          </p>
+        </div>
       </div>
+    </footer>
 
-      <!-- Projekt -->
+    <!-- Bootstrap -->
 
-      <div class="col-md-3 mb-4">
-
-        <h4 class="footer-title">Projektinformationen</h4>
-
-        <p>
-          <strong>Ersteller:</strong><br>
-          Luis Backer, Lars Blättler
-        </p>
-
-        <p>
-          <strong>Dokumentation:</strong><br>
-          Backer_Blättler_mma25b_M287
-        </p>
-
-        <p>
-          <strong>Abgabe:</strong><br>
-          1. Juni 2026
-        </p>
-
-      </div>
-
-      <!-- Navigation -->
-
-      <div class="col-md-3 mb-4">
-
-        <h4 class="footer-title">Navigation</h4>
-
-        <ul class="footer-links">
-          <li><a href="startseite.html">Home</a></li>
-          <li><a href="reiseziele.html">Reiseziele</a></li>
-          <li><a href="planung.html">Planung</a></li>
-        </ul>
-
-      </div>
-
-      <!-- Google Maps -->
-
-      <div class="col-md-3 mb-4">
-
-        <h4 class="footer-title">Standort</h4>
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10822.329847735455!2d8.3017!3d47.0502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ffb85c4a6f5d1%3A0x41fef1f1f1f1f1f1!2sLucerne%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1716030000000"
-          width="100%"
-          height="150"
-          style="border:0; border-radius:15px;"
-          loading="lazy">
-        </iframe>
-
-      </div>
-
-    </div>
-
-    <hr class="footer-divider">
-
-    <div class="text-center">
-
-      <p class="footer-bottom mt-3">
-        © 2026 Mapily | Alle Rechte vorbehalten
-      </p>
-
-    </div>
-
-  </div>
-
-</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

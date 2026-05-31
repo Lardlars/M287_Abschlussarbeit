@@ -21,167 +21,195 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
       <div class="container">
-        <a class="navbar-brand" href="startseite.html">
-          <img src="../img/dein-logo-png.png" alt="Logo" width="40" />
+        <a
+          class="navbar-brand d-flex align-items-center brand"
+          href="startseite.html"
+        >
+          <img
+            src="../img/dein-logo-png.png"
+            alt="Logo"
+            width="45"
+            height="45"
+            class="me-2"
+          />
+
           Mapily
         </a>
 
-        <div>
-          <ul class="navbar-nav">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="startseite.html">Home</a>
+              <a class="nav-link" href="startseite.html"> Home </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="reiseziele.html">Reiseziele</a>
+              <a class="nav-link active" href="reiseziele.html"> Reiseziele </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="planung.html">Planung</a>
+              <a class="nav-link" href="planung.html"> Planung </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Hauptteil -->
-    <main class="container mt-5">
-      <h1>Reiseziele</h1>
+    <!-- Hauptbereich -->
 
-      <p>
-        Auf dieser Seite zeigen wir verschiedene Reiseziele. Man kann hier Ideen
-        für eine Reise finden.
-      </p>
+    <main class="container py-5">
+      <section class="text-center mb-5">
+        <h1 class="planung-title">Beliebte Reiseziele</h1>
 
-      <!-- Karten mit Reisezielen -->
-      <div class="row mt-4">
-        <!-- Paris Card -->
-        <div class="col-md-4 mb-4">
-          <div class="card" data-bs-toggle="modal" data-bs-target="#parisModal">
-            <img src="../img/paris.jpg" class="card-img-top" alt="Paris" />
-
-            <div class="card-body">
-              <h5 class="card-title">Paris</h5>
-              <p class="card-text">
-                Paris ist eine bekannte Stadt in Frankreich. Dort gibt es den
-                Eiffelturm und viele Museen.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Nepal Card -->
-        <div class="col-md-4 mb-4">
-          <div class="card" data-bs-toggle="modal" data-bs-target="#nepalModal">
-            <img src="../img/berge.jpg" class="card-img-top" alt="Nepal" />
-
-            <div class="card-body">
-              <h5 class="card-title">Nepal</h5>
-              <p class="card-text">
-                Nepal ist ein Land in Asien. Dort gibt es die Himalaya-Berge und
-                viele Tempel.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Italien Card -->
-        <div class="col-md-4 mb-4">
-          <div
-            class="card"
-            data-bs-toggle="modal"
-            data-bs-target="#italienModal"
-          >
-            <img src="../img/meer.jpg" class="card-img-top" alt="Italien" />
-
-            <div class="card-body">
-              <h5 class="card-title">Italien</h5>
-              <p class="card-text">
-                Italien ist ein Land in Europa. Dort gibt es viele historische
-                Stätten und eine tolle Küche.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video Abschnitt -->
-      <section class="mt-5">
-        <h2>Unser Reisegeheimtipp</h2>
-
-        <p>
-          Kanada, das Land der unendlichen Wälder und ein perfektes Reiseziel.
+        <p class="planung-text">
+          Entdecke inspirierende Orte für deine nächste Traumreise.
         </p>
+      </section>
 
-        <video controls preload="none" width="100%">
+      <!-- Reiseziele -->
+
+      <section class="mb-5">
+        <div class="row g-4">
+          <!-- Paris -->
+
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#parisModal"
+            >
+              <img src="../img/paris.jpg" class="card-img-top" alt="Paris" />
+
+              <div class="card-body">
+                <h5 class="card-title">Paris</h5>
+
+                <p class="card-text">
+                  Die Stadt der Liebe mit berühmten Sehenswürdigkeiten und
+                  beeindruckender Architektur.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nepal -->
+
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#nepalModal"
+            >
+              <img src="../img/berge.jpg" class="card-img-top" alt="Nepal" />
+
+              <div class="card-body">
+                <h5 class="card-title">Nepal</h5>
+
+                <p class="card-text">
+                  Atemberaubende Berge, Tempel und Abenteuer im Himalaya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Italien -->
+
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#italienModal"
+            >
+              <img src="../img/meer.jpg" class="card-img-top" alt="Italien" />
+
+              <div class="card-body">
+                <h5 class="card-title">Italien</h5>
+
+                <p class="card-text">
+                  Genuss, Kultur und wunderschöne Landschaften in Europa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video -->
+
+      <section class="planung-box mb-5">
+        <h2 class="mb-4">Unser Reisegeheimtipp</h2>
+
+        <p>Kanada begeistert mit Natur, Seen und beeindruckenden Wäldern.</p>
+
+        <video controls preload="none" class="w-100 rounded">
           <source src="../video/reisevideo.mp4" type="video/mp4" />
+
           Dein Browser unterstützt das Video nicht.
         </video>
       </section>
 
       <!-- Formular -->
-      <section class="mt-5 mb-5">
-        <div class="card shadow">
-          <div class="card-body">
-            <h2 class="card-title">Finde dein perfektes Reiseziel</h2>
 
-            <p class="card-text">
-              Beantworte ein paar Fragen und finde heraus, welche Reise zu dir
-              passt.
-            </p>
+      <section class="planung-box mb-5">
+        <h2 class="mb-4">Finde dein perfektes Reiseziel</h2>
 
-            <form onsubmit="return false;">
-              <div class="mb-3">
-                <label for="reiseart" class="form-label"
-                  >Welche Reiseart möchtest du?</label
-                >
-                <select class="form-select" id="reiseart">
-                  <option>Strand</option>
-                  <option>Stadt</option>
-                  <option>Natur</option>
-                  <option>Abenteuer</option>
-                </select>
-              </div>
+        <form onsubmit="return false;">
+          <div class="mb-3">
+            <label for="reiseart" class="form-label"> Reiseart </label>
 
-              <div class="mb-3">
-                <label for="wetter" class="form-label"
-                  >Wie soll das Wetter sein?</label
-                >
-                <select class="form-select" id="wetter">
-                  <option>Warm</option>
-                  <option>Mild</option>
-                  <option>Kühl</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
-                <label for="budget" class="form-label"
-                  >Wie gross ist dein Budget?</label
-                >
-                <select class="form-select" id="budget">
-                  <option>Klein</option>
-                  <option>Mittel</option>
-                  <option>Hoch</option>
-                </select>
-              </div>
-
-              <button type="submit" class="btn btn-primary">
-                Reiseziel finden
-              </button>
-            </form>
+            <select class="form-select" id="reiseart">
+              <option>Strand</option>
+              <option>Stadt</option>
+              <option>Natur</option>
+              <option>Abenteuer</option>
+            </select>
           </div>
-        </div>
+
+          <div class="mb-3">
+            <label for="wetter" class="form-label"> Wetter </label>
+
+            <select class="form-select" id="wetter">
+              <option>Warm</option>
+              <option>Mild</option>
+              <option>Kühl</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="budget" class="form-label"> Budget </label>
+
+            <select class="form-select" id="budget">
+              <option>Klein</option>
+              <option>Mittel</option>
+              <option>Hoch</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Reiseziel finden
+          </button>
+        </form>
       </section>
     </main>
 
     <!-- Paris Modal -->
+
     <div class="modal fade" id="parisModal" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Paris</h5>
+
             <button
               type="button"
               class="btn-close"
@@ -197,14 +225,7 @@
             />
 
             <p>
-              Paris ist die Hauptstadt von Frankreich. Die Stadt ist bekannt für
-              den Eiffelturm, den Louvre, schöne Cafés und viele
-              Sehenswürdigkeiten.
-            </p>
-
-            <p>
-              Paris passt gut für Personen, die Kultur, Architektur und
-              Stadtleben mögen.
+              Paris ist bekannt für den Eiffelturm, den Louvre und viele Cafés.
             </p>
           </div>
         </div>
@@ -212,11 +233,13 @@
     </div>
 
     <!-- Nepal Modal -->
+
     <div class="modal fade" id="nepalModal" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Nepal</h5>
+
             <button
               type="button"
               class="btn-close"
@@ -231,26 +254,20 @@
               alt="Nepal"
             />
 
-            <p>
-              Nepal liegt in Asien und ist besonders bekannt für die
-              Himalaya-Berge. Dort befindet sich auch der Mount Everest.
-            </p>
-
-            <p>
-              Nepal passt gut für Personen, die Natur, Wandern und Abenteuer
-              mögen.
-            </p>
+            <p>Nepal bietet beeindruckende Berge, Natur und Abenteuerreisen.</p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Italien Modal -->
+
     <div class="modal fade" id="italienModal" tabindex="-1">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Italien</h5>
+
             <button
               type="button"
               class="btn-close"
@@ -266,63 +283,27 @@
             />
 
             <p>
-              Italien ist ein beliebtes Reiseziel in Europa. Es ist bekannt für
-              Städte wie Rom, Venedig und Florenz.
-            </p>
-
-            <p>
-              Italien passt gut für Personen, die gutes Essen, Geschichte,
-              Kultur und schöne Landschaften mögen.
+              Italien begeistert mit Kultur, Geschichte und mediterranem Essen.
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+
     <footer class="footer text-white mt-5">
       <div class="container py-4">
         <div class="row">
-          <!-- Mapily -->
-
-          <div class="col-md-3 mb-4">
+          <div class="col-md-4 mb-4">
             <h3 class="footer-title">Mapily</h3>
 
             <p>
               Dein moderner Reisebegleiter für Abenteuer auf der ganzen Welt.
             </p>
-
-            <!-- Social Media -->
-
-            <div class="social-icons">
-              <a href="#"><span>📸</span></a>
-              <a href="#"><span>🎥</span></a>
-              <a href="#"><span>🐦</span></a>
-            </div>
           </div>
 
-          <!-- Projekt -->
-
-          <div class="col-md-3 mb-4">
-            <h4 class="footer-title">Projektinformationen</h4>
-
-            <p>
-              <strong>Ersteller:</strong><br />
-              Luis Backer, Lars Blättler
-            </p>
-
-            <p>
-              <strong>Dokumentation:</strong><br />
-              Backer_Blättler_mma25b_M287
-            </p>
-
-            <p>
-              <strong>Abgabe:</strong><br />
-              1. Juni 2026
-            </p>
-          </div>
-
-          <!-- Navigation -->
-
-          <div class="col-md-3 mb-4">
+          <div class="col-md-4 mb-4">
             <h4 class="footer-title">Navigation</h4>
 
             <ul class="footer-links">
@@ -332,32 +313,26 @@
             </ul>
           </div>
 
-          <!-- Google Maps -->
+          <div class="col-md-4 mb-4">
+            <h4 class="footer-title">Projekt</h4>
 
-          <div class="col-md-3 mb-4">
-            <h4 class="footer-title">Standort</h4>
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10822.329847735455!2d8.3017!3d47.0502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ffb85c4a6f5d1%3A0x41fef1f1f1f1f1f1!2sLucerne%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1716030000000"
-              width="100%"
-              height="150"
-              style="border: 0; border-radius: 15px"
-              loading="lazy"
-            >
-            </iframe>
+            <p>
+              Luis Backer & Lars Blättler<br />
+              MMA25B
+            </p>
           </div>
         </div>
 
         <hr class="footer-divider" />
 
         <div class="text-center">
-          <p class="footer-bottom mt-3">
-            © 2026 Mapily | Alle Rechte vorbehalten
-          </p>
+          <p class="footer-bottom mt-3">© 2026 Mapily</p>
         </div>
       </div>
     </footer>
-    <!-- Bootstrap JavaScript für Modal -->
+
+    <!-- Bootstrap -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
